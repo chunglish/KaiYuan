@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)https://baozi.fun/journals -->
+<html lang="zh" class="p-0 m-0 h-full text-base sm:text-sm sr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="keywords"
+			content="baozi.fun,baozi.fun,学而录,学知录,Java博客,halo,blog,java并发,mac,ReleaseTheSnyderCut,个人博客,寒山,寒山志">
+		<meta name="description" content="个人网站，记录生活、聊聊工作、品品人生">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="generator" content="Halo 1.5.4">
+		<link rel="shortcut icon" type="images/x-icon"
+			href="https://baozi.fun/upload/2020/11/favicon-66871085849649cb84e97567dd222fbd.ico">
+
+		<title>日志 | 知行记</title>
+		<style>
+			:root {
+				--base-hover-color: #f1404b;
+				--base-hl-color: #f1404b;
+				--base-code-text-color: #a9b7c6;
+
+				--text-color: #333333;
+				/*夜晚默认*/
+				--night-txt-color: #a9a9b3;
+
+				--tw-skew-x: 0;
+				--tw-skew-y: 0;
+				--tw-scale-x: 1;
+				--tw-scale-y: 1;
+				--tw-translate-x: 0;
+				--tw-translate-y: 0;
+				--tw-rotate: 0;
+			}
+		</style>
+
+		<link href="./JournalPage2_files/jqcloud.min.css" rel="stylesheet">
+		<link href="./JournalPage2_files/heti.min.css" rel="stylesheet">
+		<link href="./JournalPage2_files/katex.min.css" rel="stylesheet">
+		<link href="./JournalPage2_files/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="./JournalPage2_files/qmsg.css" rel="stylesheet">
+
+
+		<link rel="stylesheet" href="./JournalPage2_files/style.css">
+
+		<link rel="stylesheet" href="./JournalPage2_files/atom-one-dark.css">
+
+		<script src="./JournalPage2_files/hm.js.下载"></script>
+		<script src="./JournalPage2_files/hm.js.下载"></script>
+		<script src="./JournalPage2_files/jquery.min.js.下载"></script>
+	</head>
+	<body class="p-0 m-0 h-full font-sans" style="height: 100%;">
+		<div class="flex flex-col h-full">
+			<header
+				class="nav-wrapper top-0 left-0 right-0 p-0 z-50 w-full fixed transition-opacity duration-300 opacity-100"
+				id="navHeader" style="flex: 0 0 auto;">
+				<nav class="nav bg-white dark:bg-gray-900 md:bg-transparent" id="nav">
+					<label
+						class="inline-grid select-none place-content-center cursor-pointer h-full inline-block md:hidden ">
+						<span class="iconfont icon-menu menu-btn text-gray-800 dark:text-gray-100 text-xl"></span>
+					</label>
+					<span
+						class="iconfont icon-search fill-current inline-block md:hidden link dark:text-gray-100 search-btn ml-0 md:ml-4 cursor-pointer text-gray-100"
+						style="padding-top: 1.4rem; font-size: 1.4rem; font-weight: 300">
+					</span>
+					<div class="nav-list list-none absolute top-16 bottom-0 hidden md:block">
+						<div class="list">
+							<li class="item p-0 ">
+								<a class="menu-item link block dark:text-gray-100 md:text-base sm:text-sm text-gray-100"
+									data-path="/" href="https://baozi.fun/" target="_self">
+									文章
+								</a>
+							</li>
+							<li class="item p-0 ">
+								<a class="menu-item link block dark:text-gray-100 md:text-base sm:text-sm text-gray-100"
+									data-path="/archives" href="https://baozi.fun/archives" target="_self">
+									归档
+								</a>
+							</li>
+							<li class="item p-0 ">
+								<a class="menu-item link block dark:text-gray-100 md:text-base sm:text-sm menu-active text-gray-100"
+									data-path="/journals" href="https://baozi.fun/journals" target="_self">
+									日志
+								</a>
+							</li>
+							<li class="item p-0 ">
+								<a class="menu-item link block dark:text-gray-100 md:text-base sm:text-sm text-gray-100"
+									data-path="/photos" href="https://baozi.fun/photos" target="_self">
+									相册
+								</a>
+							</li>
+							<li class="item p-0 ">
+								<a class="menu-item link block dark:text-gray-100 md:text-base sm:text-sm text-gray-100"
+									data-path="/s/about" href="https://baozi.fun/s/about" target="_self">
+									关于我
+								</a>
+							</li>
+
+							<li class="item p-0 flex flex-col md:flex-row" style="margin-left: auto;">
+								<span class="link dark:text-gray-100 fill-current text-gray-100"
+									style="padding-top: 0.8rem;">
+									<label
+										class="relative inline-grid select-none place-content-center cursor-pointer h-full swap swap-rotate">
+										<input type="checkbox" class="border-none darkCheckbox">
+										<svg class="swap-off fill-current w-6 h-6 link text-gray-100"
+											viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="150"
+											height="150">
+											<path
+												d="M557.553778 976.355556c-257.265778 0-466.56-207.160889-466.56-464.426667 0-253.923556 206.577778-464.284444 460.501333-464.284445h0.355556c10.766222 0 20.622222 3.953778 25.443555 13.610667 4.878222 9.756444 3.740444 20.394667-2.915555 29.027556-55.722667 72.220444-85.162667 158.108444-85.162667 249.372444 0 225.891556 183.779556 409.386667 409.671111 409.386667l5.248-0.256c10.325333-0.142222 20.977778 5.859556 25.841778 15.644444a28.302222 28.302222 0 0 1-2.915556 30.051556C837.902222 910.08 703.203556 976.355556 557.553778 976.355556zM495.274667 105.016889C299.192889 135.281778 147.882667 306.161778 147.882667 509.809778c0 225.877333 183.779556 409.656889 409.671111 409.656889 108.686222 0 210.403556-42.055111 286.577778-116.977778-231.566222-27.192889-411.804444-224.625778-411.804445-463.36 0-83.427556 21.617778-163.299556 62.947556-234.112z"
+												fill=""></path>
+											<path
+												d="M578.830222 879.132444c-186.865778 0-345.784889-133.418667-377.841778-317.269333a14.222222 14.222222 0 1 1 28.017778-4.878222c29.681778 170.183111 176.810667 293.703111 349.824 293.703111a14.222222 14.222222 0 1 1 0 28.444444zM209.991111 531.2c-7.537778 0-13.838222-6.997333-14.193778-14.606222-0.312889-6.584889-0.483556-13.795556-0.483555-20.465778 0-7.864889 6.357333-14.492444 14.222222-14.492444s14.222222 6.229333 14.222222 14.094222c0 6.229333 0.170667 13.425778 0.455111 19.584 0.369778 7.850667-5.674667 15.886222-13.525333 15.886222h-0.696889z"
+												fill=""></path>
+											<path
+												d="M622.350222 309.930667m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z"
+												fill=""></path>
+											<path
+												d="M787.072 188.273778m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z"
+												fill=""></path>
+											<path
+												d="M731.960889 415.303111m-25.344 0a25.344 25.344 0 1 0 50.688 0 25.344 25.344 0 1 0-50.688 0Z"
+												fill=""></path>
+										</svg>
+
+										<svg class="swap-on fill-current w-6 h-6 link text-gray-100"
+											viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="150"
+											height="150">
+											<path
+												d="M520.021333 208.284444c-165.987556 0-301.041778 135.04-301.041777 301.027556 0 165.987556 135.04 301.027556 301.041777 301.027556 166.001778 0 301.056-135.025778 301.056-301.027556 0-165.987556-135.054222-301.027556-301.056-301.027556z m0 545.194667c-134.613333 0-244.152889-109.525333-244.152889-244.152889 0-134.627556 109.525333-244.138667 244.152889-244.138666 134.641778 0 244.167111 109.511111 244.167111 244.138666 0 134.641778-109.525333 244.152889-244.167111 244.152889z"
+												fill=""></path>
+											<path
+												d="M493.027556 317.240889a164.949333 164.949333 0 0 0-141.212445 80.426667 14.250667 14.250667 0 0 0 24.476445 14.535111 136.32 136.32 0 0 1 116.736-66.517334 14.222222 14.222222 0 1 0 0-28.444444zM350.307556 433.265778a14.307556 14.307556 0 0 0-17.095112 10.595555c-2.773333 11.747556-4.323556 19.015111-4.323555 32.284445a14.222222 14.222222 0 1 0 28.444444 0c0-10.183111 1.095111-15.260444 3.569778-25.784889a14.222222 14.222222 0 0 0-10.595555-17.095111zM531.484444 846.222222a28.444444 28.444444 0 0 0-28.444444 28.444445v85.333333a28.444444 28.444444 0 0 0 56.888889 0v-85.333333a28.444444 28.444444 0 0 0-28.444445-28.444445zM531.484444 177.777778a28.444444 28.444444 0 0 0 28.444445-28.444445v-85.333333a28.444444 28.444444 0 0 0-56.888889 0v85.333333a28.444444 28.444444 0 0 0 28.444444 28.444445zM242.56 745.642667l-60.330667 60.330666a28.444444 28.444444 0 1 0 40.220445 40.220445l60.330666-60.330667a28.444444 28.444444 0 1 0-40.220444-40.220444zM775.552 281.315556c7.281778 0 14.549333-2.773333 20.110222-8.334223l60.330667-60.330666a28.444444 28.444444 0 1 0-40.220445-40.220445l-60.330666 60.330667a28.444444 28.444444 0 0 0 20.110222 48.554667zM242.56 272.981333c5.560889 5.560889 12.828444 8.334222 20.110222 8.334223a28.444444 28.444444 0 0 0 20.110222-48.554667l-60.330666-60.330667a28.444444 28.444444 0 1 0-40.220445 40.220445l60.330667 60.330666zM795.662222 745.642667a28.444444 28.444444 0 1 0-40.220444 40.220444l60.330666 60.359111c5.560889 5.560889 12.828444 8.334222 20.110223 8.334222s14.549333-2.773333 20.110222-8.334222c11.093333-11.107556 11.093333-29.112889 0-40.220444l-60.330667-60.359111zM149.333333 490.666667h-85.333333a28.444444 28.444444 0 0 0 0 56.888889h85.333333a28.444444 28.444444 0 0 0 0-56.888889zM960 490.666667h-85.333333a28.444444 28.444444 0 0 0 0 56.888889h85.333333a28.444444 28.444444 0 0 0 0-56.888889z"
+												fill=""></path>
+										</svg>
+									</label> </span>
+								<span
+									class="iconfont icon-search fill-current link dark:text-gray-100 search-btn ml-0 md:ml-4 cursor-pointer hidden md:inline-block text-gray-100"
+									style="padding-top: 1rem; font-size: 1.4rem">
+								</span>
+							</li>
+						</div>
+					</div>
+
+					<div
+						class="mobile-sidebar bg-gray-100 dark:bg-gray-900 flex flex-col h-screen z-50 fixed top-0 left-0 w-3/5">
+						<div class="mobile-sidebar-inner">
+							<div class="flex text-right p-4 justify-end text-lg">
+								<span class="text-gray-800 dark:text-gray-100 fill-current mx-2.5">
+									<i class="iconfont cursor-pointer dark-btn"></i>
+								</span>
+								<span
+									class="iconfont icon-close-circle-fill text-gray-800 dark:text-gray-300 menu-btn mx-2.5 text-xl cursor-pointer"></span>
+							</div>
+							<div class="relative py-0 px-4">
+								<ul class="overflow-x-hidden overflow-y-auto pl-0 z-50" style="flex: 1 1 auto;">
+									<li class="relative mb-3 py-3.5 px-4 block bg-white dark:bg-gray-800 rounded-md ">
+										<a class="relative block text-base p-0 text-gray-800 dark:text-gray-100"
+											href="https://baozi.fun/">文章</a>
+									</li>
+									<li class="relative mb-3 py-3.5 px-4 block bg-white dark:bg-gray-800 rounded-md ">
+										<a class="relative block text-base p-0 text-gray-800 dark:text-gray-100"
+											href="https://baozi.fun/archives">归档</a>
+									</li>
+									<li class="relative mb-3 py-3.5 px-4 block bg-white dark:bg-gray-800 rounded-md ">
+										<a class="relative block text-base p-0 text-gray-800 dark:text-gray-100"
+											href="https://baozi.fun/journals">日志</a>
+									<li class="relative mb-3 py-3.5 px-4 block bg-white dark:bg-gray-800 rounded-md ">
+										<a class="relative block text-base p-0 text-gray-800 dark:text-gray-100"
+											href="https://baozi.fun/photos">相册</a>
+									</li>
+									<li class="relative mb-3 py-3.5 px-4 block bg-white dark:bg-gray-800 rounded-md ">
+										<a class="relative block text-base p-0 text-gray-800 dark:text-gray-100"
+											href="https://baozi.fun/s/about">关于我</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div
+						class="non-click-bg z-40 overflow-hidden w-full h-full fixed bg-gray-200 opacity-60 hidden menu-btn">
+					</div>
+				</nav>
+			</header>
+			<div class="bg-gray-50 dark:bg-gray-900" style="flex: 1 0 auto;">
+				<main class="mx-auto" id="container">
+					<header class="bg-gray-900 table fade-down relative w-full opacity-95 z-10 h-1/2">
+						<div class="placeholder-bg">
+						</div>
+						<div class="h-96 align-middle table-cell relative w-full index flex justify-center">
+							<h2
+								class="text-white mb-5 mt-4 leading-loose relative w-full text-4xl text-center dark:text-gray-300">
+								日志 <sup>20</sup>
+							</h2>
+						</div>
+					</header>
+					<div class="mx-auto px-10 mt-16 max-w-5xl tracking-wider md:leading-relaxed sm:leading-normal
+                ct-container cn-pd fade-up is-container" id="moreContainer">
+					<div id="journals">
+							<div style="position: relative">
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="15"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-09-16 19:28:37">2022.9.16</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>无糖王老吉黑罐凉茶真是世界上最难喝的饮品。</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/63/likes"
+													data-count="2" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-63">
+											<section class="comments-area">
+												<div class="inner" id="commentInner63">
+													<halo-comment id="63" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment63');
+													if (!haloComment) {
+														$('#' + '63').remove();
+														$('#commentInner63').append('<div id="haloComment63"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment63',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="63" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="16"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-05-01 01:11:39">2022.5.1</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>光荣属于劳动者，幸福属于劳动者！</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/62/likes"
+													data-count="1" fill="currentColor">
+												</span>
+											</div>
+											
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-62">
+											<section class="comments-area">
+												<div class="inner" id="commentInner62">
+
+													<halo-comment id="62" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment62');
+													if (!haloComment) {
+														$('#' + '62').remove();
+														$('#commentInner62').append('<div id="haloComment62"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment62',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="62" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="17"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-04-29 18:42:58">2022.04.29</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>滨海畔，太行东，</p>
+												<p>那里飘过齐鲁风。</p>
+												<p>一座山，一条河，</p>
+												<p>还有两位圣先哲。</p>
+												<p>泰山矗立、黄河入海，</p>
+												<p>孔孟之道传播四方，</p>
+												<p>成就礼仪之邦。</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/61/likes"
+													data-count="2" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-61">
+											<section class="comments-area">
+												<div class="inner" id="commentInner61">
+
+													<halo-comment id="61" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment61');
+													if (!haloComment) {
+														$('#' + '61').remove();
+														$('#commentInner61').append('<div id="haloComment61"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment61',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="61" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="18"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-01-01 12:32:33">2022.1.1</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>风雨过后见彩虹，好人都一生平安</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/60/likes"
+													data-count="26" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-60">
+											<section class="comments-area">
+												<div class="inner" id="commentInner60">
+
+													<halo-comment id="60" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment60');
+													if (!haloComment) {
+														$('#' + '60').remove();
+														$('#commentInner60').append('<div id="haloComment60"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment60',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="60" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="19"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-12-25 19:06:35">2022.12.25</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>苦尽甘来即是今日，山河星月皆作贺礼，考研的UU们成功上岸！</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/59/likes"
+													data-count="11" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-59">
+											<section class="comments-area">
+												<div class="inner" id="commentInner59">
+
+													<halo-comment id="59" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment59');
+													if (!haloComment) {
+														$('#' + '59').remove();
+														$('#commentInner59').append('<div id="haloComment59"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment59',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="59" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="20"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2022-12-8 00:31:38">2022.12.8</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>一二真是太可爱了</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/58/likes"
+													data-count="13" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-58">
+											<section class="comments-area">
+												<div class="inner" id="commentInner58">
+
+													<halo-comment id="58" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment58');
+													if (!haloComment) {
+														$('#' + '58').remove();
+														$('#commentInner58').append('<div id="haloComment58"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment58',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="58" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="21"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2021-06-21 22:40:14">2021.6.21</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>境界危恶,层见错出,非人世所堪的外方课终于结束了！</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/57/likes"
+													data-count="9" fill="currentColor">
+												</span>
+											</div>
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-57">
+											<section class="comments-area">
+												<div class="inner" id="commentInner57">
+
+													<halo-comment id="57" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment57');
+													if (!haloComment) {
+														$('#' + '57').remove();
+														$('#commentInner57').append('<div id="haloComment57"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment57',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="57" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="22"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2021-05-08 23:42:48">2021.5.8 </div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>死生，昼夜事也。死而死矣，而境界危恶，层见错出，非人世所堪。痛定思痛，痛何如哉!</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/56/likes"
+													data-count="16" fill="currentColor">
+												</span>
+											</div>
+											<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+											<section class="comments-area">
+												<div class="inner" id="commentInner56">
+
+													<halo-comment id="56" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment56');
+													if (!haloComment) {
+														$('#' + '56').remove();
+														$('#commentInner56').append('<div id="haloComment56"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment56',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="23"
+									style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2021-02-13 21:48:07">2021.2.13</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>祝大家今年的运势和我妹发际线一样高！</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/55/likes"
+													data-count="8" fill="currentColor">
+												</span>
+											</div>
+											<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="55">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-55">
+											<section class="comments-area">
+												<div class="inner" id="commentInner55">
+
+													<halo-comment id="55" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment55');
+													if (!haloComment) {
+														$('#' + '55').remove();
+														$('#commentInner55').append('<div id="haloComment55"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment55',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="55" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+								<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+									data-sr-id="24"
+									style="visibility: visible; opacity: ; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+									<div
+										class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+										<div class="flex">
+											<div class="mr-2">
+												<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+													src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+													alt="小仔">
+											</div>
+											<div>
+												<div class="flex space-x-1">
+													<span class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+													<span class="text-blue-500">
+														<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+															aria-label="Verified account">
+															<g>
+																<path
+																	d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																</path>
+															</g>
+														</svg>
+													</span>
+												</div>
+												<div class="text-gray-500 leading-4 text-sm time-ago"
+													data-time="2021-02-10 17:15:10">2021.2.10</div>
+											</div>
+										</div>
+										<div class="py-6">
+											<div class="text-lg md-content" id="lightGallery">
+												<p>闲云潭影日悠悠，物换星移几度秋</p>
+											</div>
+										</div>
+										<div
+											class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+											<div class="flex space-x-2">
+												<span
+													class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+													style="font-size: 1.5rem;line-height: 1.6rem;"
+													data-path="https://baozi.fun/api/content/journals/54/likes"
+													data-count="9" fill="currentColor">
+												</span>
+											</div>
+											<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="54">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+										</div>
+										<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-54">
+											<section class="comments-area">
+												<div class="inner" id="commentInner54">
+
+													<halo-comment id="54" type="journal"
+														configs="{&quot;darkMode&quot;:false}"></halo-comment>
+												</div>
+											</section>
+
+
+											<script defer="" type="application/javascript" data-pjax-comment="">
+												function renderComment() {
+													var haloComment = document.getElementById('haloComment54');
+													if (!haloComment) {
+														$('#' + '54').remove();
+														$('#commentInner54').append('<div id="haloComment54"></div>');
+													}
+													if (!localStorage.theme) {
+														localStorage.setItem('theme', 'light')
+													}
+													if (typeof Vue === "undefined") {
+														// console.error('Vue is not defined')
+														return
+													}
+													new Vue({
+														el: '#haloComment54',
+														data() {
+															return {
+																configs: {
+																	darkMode: localStorage.getItem('theme') === 'dark'
+																}
+															};
+														},
+														template: `<halo-comment id="54" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+													});
+												}
+												renderComment();
+											</script>
+										</div>
+									</div>
+								</div>
+					<div id="journals">
+									<div style="position: relative">
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2021-01-08 23:42:48">2021.1.8</div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>又是寒冷的一天！</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-12-14 23:42:48">2020.12.14 </div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>千门万户瞳瞳日，总把新桃换旧符</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-11-24 23:42:48">2020.11.24</div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>滕国丐帮。</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-11-15  23:42:48">2020.11.15 </div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>我爱济南，我混的很好</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-10-01 23:42:48">2020.10.01</div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>家国相依，人月亮圆</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-04-29 23:42:48">2020.4.29 </div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>公交车与赞美诗</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+										<div class="min-h-screen py-6 flex flex-col justify-center items-center slide-up"
+											data-sr-id="22"
+											style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0s;">
+											<div
+												class="w-full bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-2xl py-3 px-5">
+												<div class="flex">
+													<div class="mr-2">
+														<img class="rounded-full h-10 w-10 dark:filter-60 no-zoom"
+															src="./日志 _ 知行记_files/321604539517_.pic-ba0e711a76084a799249176a04153470.jpg"
+															alt="小仔">
+													</div>
+													<div>
+														<div class="flex space-x-1">
+															<span
+																class="font-bold text-gray-800 dark:text-gray-300">小仔</span>
+															<span class="text-blue-500">
+																<svg class="w-5 h-5" fill="currentColor"
+																	viewBox="0 0 24 24" aria-label="Verified account">
+																	<g>
+																		<path
+																			d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.415-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .494.083.964.237 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z">
+																		</path>
+																	</g>
+																</svg>
+															</span>
+														</div>
+														<div class="text-gray-500 leading-4 text-sm time-ago"
+															data-time="2020-01-24 23:42:48">2020.1.24</div>
+													</div>
+												</div>
+												<div class="py-6">
+													<div class="text-lg md-content" id="lightGallery">
+														<p>只有精神强大了，人们才能精神百倍</p>
+													</div>
+												</div>
+												<div
+													class="flex space-x-5 pt-3 text-gray-500 border-t border-gray-300 dark:border-gray-700">
+													<div class="flex space-x-2">
+														<span
+															class="iconfont icon-heart relative inline-block h-full cursor-pointer like-btn"
+															style="font-size: 1.5rem;line-height: 1.6rem;"
+															data-path="https://baozi.fun/api/content/journals/56/likes"
+															data-count="16" fill="currentColor">
+														</span>
+													</div>
+													<!-- <div class="flex space-x-2" v-show="isShow">
+                         <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 cursor-pointer hover:text-red-300 comment-btn" data-index="56">
+                           <g>
+                             <path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z">
+                             </path>
+                           </g>
+                         </svg>
+                         <span>0</span>
+                       </div> -->
+												</div>
+												<div class=" space-x-5 pt-3 text-gray-500 hidden" id="comment-56">
+													<section class="comments-area">
+														<div class="inner" id="commentInner56">
+
+															<halo-comment id="56" type="journal"
+																configs="{&quot;darkMode&quot;:false}"></halo-comment>
+														</div>
+													</section>
+
+
+													<script defer="" type="application/javascript" data-pjax-comment="">
+														function renderComment() {
+															var haloComment = document.getElementById('haloComment56');
+															if (!haloComment) {
+																$('#' + '56').remove();
+																$('#commentInner56').append('<div id="haloComment56"></div>');
+															}
+															if (!localStorage.theme) {
+																localStorage.setItem('theme', 'light')
+															}
+															if (typeof Vue === "undefined") {
+																// console.error('Vue is not defined')
+																return
+															}
+															new Vue({
+																el: '#haloComment56',
+																data() {
+																	return {
+																		configs: {
+																			darkMode: localStorage.getItem('theme') === 'dark'
+																		}
+																	};
+																},
+																template: `<halo-comment id="56" type="journal" :configs="JSON.stringify(configs)" ></halo-comment>`,
+															});
+														}
+														renderComment();
+													</script>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					<div class="mx-auto px-10 fade-up mx-850">
+								<nav class="pagination flex flex-row justify-center my-8" role="navigation"
+									aria-label="pagination">
+									<div class="pagination-list flex flex-row" id="pagination">
+										<p style="color: #cccccc">~你已经到底了~</p>
+									</div>
+								</nav>
+							</div>
+				</main>
+			</div>
+			<footer class="footer py-8 text-center shadow-md dark:bg-gray-800" style="flex: 0 0 auto;" id="footer">
+				<div
+					class="my-0 mx-auto px-10 mx-auto flex flex-row lg:justify-between  md:justify-center items-center grid lg:grid-cols-2 md:grid-cols-1">
+					<div class="offsite-links flex flex-row justify-center flex-wrap">
+						<a href="https://github.com/xzhuz"
+							class="circle p-2 m-2.5 text-gray-400 hover:text-red-600  bg-transparent border border-gray-100 rounded-full text-gray-500 inline-block relative cursor-pointer w-10 h-10"
+							target="_blank" rel="noopener" title="Github">
+							<span class="iconfont icon-github"> </span>
+						</a>
+						<a href="mailto:c@baozi.fun"
+							class="circle p-2 m-2.5 text-gray-400 hover:text-red-600 bg-transparent border border-gray-100 rounded-full text-gray-500 inline-block relative cursor-pointer w-10 h-10"
+							target="_blank" rel="noopener" title="邮箱">
+							<span class="iconfont icon-youxiang"> </span>
+						</a>
+						<a href="https://baozi.fun/atom.xml"
+							class="circle p-2 m-2.5 text-gray-400 hover:text-red-600 bg-transparent border border-gray-100 rounded-full text-gray-500 inline-block relative cursor-pointer w-10 h-10"
+							target="_blank" rel="noopener" title="RSS">
+							<span class="iconfont icon-rss"> </span>
+						</a>
+					</div>
+
+					<div class="site-info flex flex-col justify-center text-gray-800 dark:text-gray-500">
+						<p class="leading-6"><a href="http://beian.miit.gov.cn/" target="_blank"
+								class="text-base text-gray-800 dark:text-gray-500">渝ICP备18005753号-2</a></p>
+
+						<!-- 请尊重作者，请务必保留版权 -->
+						<div class="badges">
+							<div class="github-badge">
+								<a style="color: #fff" rel="license" href="http://halo.run/" target="_blank">
+									<span class="badge-subject pr-8 mr-1">Powered</span>
+									<span class="badge-value bg-blue">Halo</span>
+								</a>
+							</div>
+							<div class="github-badge">
+								<a style="color: #fff" rel="license" href="https://github.com/xzzai/halo-theme-xue.git"
+									target="_blank">
+									<span class="badge-subject pr-8 mr-1">Theme</span>
+									<span class="badge-value bg-red">Xue</span>
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<div class="back-2-top fixed right-12 bottom-48 hidden " style="display: none;">
+				<div
+					class="relative w-16 h-16 rounded-full shadow-md bg-white dark:bg-gray-800 cursor-pointer text-center">
+					<span
+						class="iconfont icon-top text-3xl text-gray-800 dark:text-gray-300 block w-16 h-16 -transform-half"
+						style="line-height: 4rem;"></span>
+				</div>
+			</div>
+			<form method="get" action="https://baozi.fun/search">
+				<div class="hidden fixed top-0 left-0 right-0 z-50 overflow-y-auto h-full bg-gray-200 bg-opacity-60"
+					id="searchBox">
+					<div class="mt-24 mt-8 mx-auto max-w-3xl animate-search border-gray-100 ">
+						<div class="flex py-1 px-2 whitespace-nowrap rounded-md bg-white" id="searchInput">
+							<label class="flex flex-row-reverse flex-grow">
+								<input class="flex-grow p-0 text-xl border-none leading-snug" maxlength="30"
+									name="keyword" id="searchBoxInput" spellcheck="false" placeholder="Search"
+									autofocus="autofocus" autocomplete="off">
+								<span class="p-4 text-2xl opacity-50 transition-opacity iconfont icon-search"></span>
+							</label>
+							<a class="p-4 text-2xl opacity-50 transition-opacity iconfont icon-exit search-btn"></a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script>
+			function initComment() {
+				$('script[data-pjax-comment]').each(function() {
+					const commentParent = $(this).parent();
+					const comment = $(this).remove();
+					commentParent.append(comment);
+				});
+			}
+			var configs = {
+				autoLoad: true,
+				showUserAgent: true,
+				darkMode: localStorage.getItem('dark') === 'dark'
+			}
+		</script>
+		<script src="./JournalPage2_files/vue.min.js.下载" onload="initComment();"></script>
+		<script src="./JournalPage2_files/halo-comment.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/highlight.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/linesNumber.js.下载"></script>
+
+		<script src="./JournalPage2_files/jqcloud-1.0.4.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/jquery.fancybox.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/tocbot.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/isotope.pkgd.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/clipboard.min.js.下载"></script>
+
+		<script src="./JournalPage2_files/qmsg.js.下载"></script>
+
+		<script src="./JournalPage2_files/scrollreveal.js.下载"></script>
+
+
+
+		<script type="text/javascript">
+			function renderTagCloud() {
+				// 标签云
+				var tagCloud = $("#tagCloud");
+				if (!(tagCloud && tagCloud.children().length === 0)) {
+					return;
+				}
+				// 标签
+				var tagArray = [{
+						'text': '高并发',
+						'weight': '1',
+						'link': '/tags/高并发'
+					},
+					{
+						'text': '练字',
+						'weight': '2',
+						'link': '/tags/练字'
+					},
+					{
+						'text': '周记',
+						'weight': '5',
+						'link': '/tags/周记'
+					},
+					{
+						'text': '随笔',
+						'weight': '14',
+						'link': '/tags/随笔'
+					},
+					{
+						'text': '影视',
+						'weight': '2',
+						'link': '/tags/影视'
+					},
+					{
+						'text': 'Halo',
+						'weight': '3',
+						'link': '/tags/halo'
+					},
+					{
+						'text': 'PM2',
+						'weight': '0',
+						'link': '/tags/pm2'
+					},
+					{
+						'text': 'Next.js',
+						'weight': '0',
+						'link': '/tags/nextjs'
+					},
+					{
+						'text': 'Node',
+						'weight': '3',
+						'link': '/tags/node'
+					},
+					{
+						'text': 'Docker',
+						'weight': '2',
+						'link': '/tags/docker'
+					},
+					{
+						'text': '教程',
+						'weight': '2',
+						'link': '/tags/教程'
+					},
+					{
+						'text': 'maven',
+						'weight': '0',
+						'link': '/tags/maven'
+					},
+					{
+						'text': '笔记',
+						'weight': '1',
+						'link': '/tags/notes'
+					},
+					{
+						'text': 'Git',
+						'weight': '5',
+						'link': '/tags/git'
+					},
+					{
+						'text': 'Windows',
+						'weight': '0',
+						'link': '/tags/windows'
+					},
+					{
+						'text': 'Nginx',
+						'weight': '1',
+						'link': '/tags/nginx'
+					},
+					{
+						'text': 'HTTP',
+						'weight': '4',
+						'link': '/tags/http'
+					},
+					{
+						'text': '总结',
+						'weight': '2',
+						'link': '/tags/1574182624251'
+					},
+					{
+						'text': '源码',
+						'weight': '3',
+						'link': '/tags/1574182314158'
+					},
+					{
+						'text': '算法与数据结构',
+						'weight': '6',
+						'link': '/tags/1574182172022'
+					},
+					{
+						'text': 'MySQL',
+						'weight': '5',
+						'link': '/tags/mysql'
+					},
+					{
+						'text': 'Spring',
+						'weight': '2',
+						'link': '/tags/spring'
+					},
+					{
+						'text': 'JVM',
+						'weight': '5',
+						'link': '/tags/jvm'
+					},
+					{
+						'text': 'Java',
+						'weight': '24',
+						'link': '/tags/java'
+					},
+				];
+
+				// 标签云
+				tagCloud.jQCloud(tagArray, {
+					autoResize: true,
+					delayedMode: true
+				});
+
+			}
+
+			function renderCategoryCloud() {
+				// 分类云
+				var categoryCloud = $("#categoryCloud");
+				if (!(categoryCloud && categoryCloud.children().length === 0)) {
+					return;
+				}
+				// 分类
+				var array = [{
+						'text': 'JVM',
+						'weight': '3',
+						'link': '/categories/jvm'
+					},
+					{
+						'text': '练字',
+						'weight': '2',
+						'link': '/categories/练字'
+					},
+					{
+						'text': '周记',
+						'weight': '5',
+						'link': '/categories/周记'
+					},
+					{
+						'text': '随笔',
+						'weight': '14',
+						'link': '/categories/随笔'
+					},
+					{
+						'text': '电影',
+						'weight': '1',
+						'link': '/categories/电影'
+					},
+					{
+						'text': 'Node',
+						'weight': '3',
+						'link': '/categories/node'
+					},
+					{
+						'text': 'CentOS',
+						'weight': '2',
+						'link': '/categories/centos'
+					},
+					{
+						'text': 'Halo',
+						'weight': '4',
+						'link': '/categories/halo'
+					},
+					{
+						'text': 'Java',
+						'weight': '24',
+						'link': '/categories/java'
+					},
+					{
+						'text': 'Git',
+						'weight': '5',
+						'link': '/categories/git'
+					},
+					{
+						'text': '并发',
+						'weight': '6',
+						'link': '/categories/java-concurrent'
+					},
+					{
+						'text': 'Nginx',
+						'weight': '2',
+						'link': '/categories/nginx'
+					},
+					{
+						'text': '源码',
+						'weight': '4',
+						'link': '/categories/source-code'
+					},
+					{
+						'text': '总结',
+						'weight': '2',
+						'link': '/categories/summary'
+					},
+					{
+						'text': '算法',
+						'weight': '5',
+						'link': '/categories/algorightm'
+					},
+					{
+						'text': 'MySQL',
+						'weight': '5',
+						'link': '/categories/mysql'
+					},
+					{
+						'text': 'Spring',
+						'weight': '2',
+						'link': '/categories/spring'
+					},
+					{
+						'text': '高并发',
+						'weight': '1',
+						'link': '/categories/高并发'
+					},
+				];
+
+				categoryCloud.jQCloud(array, {
+					autoResize: true,
+					delayedMode: true
+				});
+			}
+
+			const loadingGif = '/themes/bao/source/images/loading.gif';
+		</script>
+
+
+		<script src="./JournalPage2_files/utils.js.下载"></script>
+		<script src="./JournalPage2_files/main.js.下载"></script>
+
+		<script type="text/javascript">
+			// console.clear();
+			console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+			console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/xzhuz");
+		</script>
+
+		<script type="text/javascript">
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?d0d9e7fe23bc996e3b0607a61c5c3a60";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+
+			const loading = "/themes/bao/source/images/loading-45.svg";
+			var photoList = ``;
+			var photos = new Array();
+			if (photoList && photoList.trim() !== '') {
+				if (photoList.endsWith(';')) {
+					photoList = photoList.substring(0, photoList.length - 1);
+				}
+				var photoArr = photoList.split(";");
+				// 过滤photos中的空字符
+				for (let i = 0; i < photoArr.length; i++) {
+					if (photoArr[i] && photoArr[i].trim().length > 0) {
+						photos.push(photoArr[i].trim());
+					}
+
+				}
+			}
+		</script>
+
+
+
+		<script src="./JournalPage2_files/jquery.pjax.js.下载"></script>
+		<script src="./JournalPage2_files/nprogress.min.js.下载"></script>
+		<link rel="stylesheet" href="./JournalPage2_files/nprogress.min.css">
+		<script type="text/javascript">
+			$(document).pjax(
+				'a[href]:not([href^="#"]):not([data-not-pjax]):not([target^="_blank"]), form',
+				'#container', {
+					fragment: '#container',
+					timeout: 8000
+				});
+
+			$(document).on('pjax:send', function() {
+				NProgress.start();
+			})
+
+			$(document).on('pjax:complete', function() {
+				NProgress.done();
+
+				xueContext.wrapImage();
+
+				xueContext.handleNavActive();
+
+				xueContext.handleNavTheme()
+
+				// 切换页面后,要隐藏菜单
+				$('.mobile-sidebar').removeClass('active')
+				$('.non-click-bg').addClass('hidden')
+
+				// 重新加载 评论
+				$('script[data-pjax-comment]').each(function() {
+					const commentParent = $(this).parent();
+					const comment = $(this).remove();
+					commentParent.append(comment);
+				});
+
+				// 存在 markdown 页面的功能
+				if ($("#container").find('.md-content').length > 0) {
+
+					// 高亮代码
+					xueContext.highlightCode()
+
+					// 滚动动画
+					xueContext.reveal()
+
+					// 目录相关
+					if (typeof tocbot !== "undefined" && document.getElementById("toc")) {
+						xueContext.handleContentToc();
+					}
+				}
+
+				// 日志
+				if ($("#container").find('#journals').length > 0) {
+					xueContext.journalModal()
+					xueContext.createTimeAgo()
+				}
+
+				// arrow down
+				if ($("#container").find('.arrow-down').length > 0) {
+					xueContext.arrowDown()
+				}
+
+				if ($("#container").find('.share-items').length > 0) {
+					xueContext.shareBtn()
+					xueContext.shareItem()
+				}
+
+				// alipay
+				if ($("#container").find('#alipay').length > 0) {
+					xueContext.toggleAlipay()
+				}
+
+				// wechat
+				if ($("#container").find('#wechat').length > 0) {
+					xueContext.toggleWeChat()
+				}
+
+				// 获取更多
+				if ($("#container").find('.more-btn').length > 0) {
+					xueContext.moreBtn()
+				}
+
+				// 喜欢
+				if ($("#container").find('.like-btn').length > 0) {
+					xueContext.likeBtn()
+				}
+
+				// 分页
+				if ($("#container").find('.pagination-circle').length > 0) {
+					xueContext.pageBtn()
+				}
+
+				// 相册页面功能
+				if ($("#container").find('.photos-page').length > 0) {
+					xueContext.gallery()
+				}
+
+				// 图片懒加载
+				xueContext.lazyloadImage()
+
+				//重载
+				if (typeof _hmt !== 'undefined') {
+					// support 百度统计
+					_hmt.push(['_trackPageview', location.pathname + location.search]);
+				}
+
+				if (typeof ga !== 'undefined') {
+					// support google analytics
+					ga('send', 'pageview', location.pathname + location.search);
+				}
+
+				if ($('#container').find('.jqcloud').length > 0) {
+					renderTagCloud();
+					renderCategoryCloud();
+
+				}
+
+				var _hmt = _hmt || [];
+				(function() {
+					var hm = document.createElement("script");
+					hm.src = "https://hm.baidu.com/hm.js?d0d9e7fe23bc996e3b0607a61c5c3a60";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(hm, s);
+				})();;
+
+			});
+
+			$(document).on('pjax:error', function() {
+				NProgress.done();
+			});
+		</script>
+
+
+	</body>
+</html>
